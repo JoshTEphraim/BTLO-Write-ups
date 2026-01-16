@@ -119,11 +119,11 @@ On the same decoded output from the above question we can see that the connectio
 
 **CONCLUSION**
 
-***This investigation confirmed that the attacker successfully compromised the web application by abusing a file upload functionality. A PHP web shell (dbfunctions.php) was uploaded through a legitimate profile edit feature and stored in a web-accessible directory where server-side code execution was permitted.
+***This investigation confirmed that the attacker successfully compromised the web application by abusing a file upload functionality. A PHP web shell (dbfunctions.php) was uploaded through a legitimate profile edit feature and stored in a web-accessible directory where server-side code execution was permitted.***
 
-Network traffic analysis revealed that the attacker verified command execution using basic system reconnaissance commands before escalating to an interactive remote shell. This was achieved by issuing commands through the web shell that caused the server to initiate an outbound connection, granting the attacker real-time control of the system.
+***Network traffic analysis revealed that the attacker verified command execution using basic system reconnaissance commands before escalating to an interactive remote shell. This was achieved by issuing commands through the web shell that caused the server to initiate an outbound connection, granting the attacker real-time control of the system.***
 
-Overall, the incident demonstrates how insufficient file upload validation and improper execution permissions can lead to full server compromise. From a defensive perspective, this highlights the importance of strict file type validation, disabling script execution in upload directories, and monitoring outbound connections from web servers as indicators of post-exploitation activity.***
+***Overall, the incident demonstrates how insufficient file upload validation and improper execution permissions can lead to full server compromise. From a defensive perspective, this highlights the importance of strict file type validation, disabling script execution in upload directories, and monitoring outbound connections from web servers as indicators of post-exploitation activity.***
 
 
 
