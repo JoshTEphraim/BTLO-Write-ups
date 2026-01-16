@@ -107,10 +107,15 @@ The output shows us that the command is telling the server to open a live remote
 
 <img width="828" height="220" alt="image" src="https://github.com/user-attachments/assets/1f763144-345d-45d2-9673-df058165f2b3" />
 
-*ANS: `Reverse Shell`*
+*ANS: `Reverse`*
 
+10. ***What is the port he uses for the shell connection?***
 
+On the same decoded output from the above question we can see that the connection is going back to `10.251.96.4:4422`
 
+<img width="960" height="169" alt="image" src="https://github.com/user-attachments/assets/2a787649-4865-4f71-9f1b-94311d27cf92" />
+
+*ANS: `4422`*
 
 
 
