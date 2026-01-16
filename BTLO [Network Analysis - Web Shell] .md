@@ -23,4 +23,43 @@ we immediately notice a high volume of port scanning done by IP `10.251.96.4` to
 	
  *ANS: `10.251.96.4`*
   
-   
+2. ***What is the port range scanned by the suspicious host?***
+
+   We will look at the *Endpoints* tab under *Statistics* and filter the *Port* from the least to the highest ***Conversations --> Endpoints --> TCP
+
+<img width="1369" height="560" alt="image" src="https://github.com/user-attachments/assets/eadc69e2-98ab-4cc9-b179-1239223e7984" />
+
+<img width="1368" height="557" alt="image" src="https://github.com/user-attachments/assets/088e19af-2342-43e0-ab65-ca50a9034f51" />
+
+*ANS: `1-1024`*
+
+3. ***What is the type of port scan conducted?
+
+   When we look at the two IPs we see alot of `SYN` scan being sent to the host IP `10.251.96.5` using the protocol `TCP` and hence this is a `TCP SYN`scan
+
+   <img width="681" height="224" alt="image" src="https://github.com/user-attachments/assets/c79ee231-ed6d-4aee-83d6-2d60a253721c" />
+
+*ANS: `TCP SYN
+
+4. ***Two more tools were used to perform reconnaissance against open ports, what were they?***
+
+   Here we need to filter out the ***User Agent Strings*** which often leave a signature of the tools used using the filter `ip.addr == 10.251.96.5 && http.user_agent ` Looking though we see a tool `gobuster` which is often used for ***Directory Brute-Forcing*** . So now we have our first tool `gobuster 3.0.1`.
+
+<img width="1572" height="806" alt="image" src="https://github.com/user-attachments/assets/1b606070-5d31-400e-8fac-d1475ca57393" />
+
+Going further down while paying attention on the `user-agent` field we come across another tool `sqlmap` which is an open source tool used to automate the process of detecting SQL injection vulnerabilities in websites.
+
+<img width="1575" height="776" alt="image" src="https://github.com/user-attachments/assets/a1ce1d54-2ebf-47e0-81c4-f72bf4977a26" />
+
+
+
+
+
+
+
+
+
+
+
+
+
