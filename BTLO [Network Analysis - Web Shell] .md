@@ -63,6 +63,71 @@ From the image looking at the referer of `upload.php` which means where it was d
 
 *ANS: `editprofile.php`*
 
+6. ***What is the name of the web shell that the attacker uploaded?***
+
+   From the same stream from the previous question `tcp.stream eq 1270` we see that the referer `http://10.251.96.5/editprofile.php` is a form-data which is information submitted from an HTML form, and this contains an uploaded document which is submitted to the server which is `upload.php` that decides what to do with the file received,by this we can see the file which was uploaded on `editprofile.php` to be by the name `filetoupload` and the filename as `dbfunctions.php`
+
+<img width="1283" height="777" alt="image" src="https://github.com/user-attachments/assets/d750d608-375f-4a68-a34f-a17d3ad45699" />
+
+*ANS: `dbfunctions.php`*
+
+7. ***What is the parameter used in the web shell for executing commands?***
+
+   Looking at the content of `dbfunctions.php` on the same stream `tcp.stream eq 1270` we can see a PHP server-side script
+
+<img width="1257" height="495" alt="image" src="https://github.com/user-attachments/assets/8997303c-8b76-45a9-8ae6-ecab8e3037f5" />
+
+The script contains a parameter `cmd` where the server will execute its values entered as operating system commands and return the output. This is the **Web-Shell**
+
+*ANS: `cmd`*
+
+8. ***What is the first command executed by the attacker?***
+
+   Now that we have the file uploaded and we know its a web-shell containing the parameter `cmd` we can query the attackers Ip whic we know to be `10.251.96.4` and look at **GET** requests using the query `ip.src==10.251.96.4 && http.request.method==GET` but found this to have brought in 4645 packets which are too many to sift through and so i opted to use the query `frame contains "cmd"` 
+
+<img width="1465" height="843" alt="image" src="https://github.com/user-attachments/assets/add8c54b-3f9f-4967-bcd3-fde859fed458" />
+
+We can clearly see that once the script was uploaded the attackers first command was `id` which checks  for the user and group identification. Attackers use this to confirm if the script works and also this leaves minimal footprint.
+
+*ANS: `id`*
+
+9. ***What is the type of shell connection the attacker obtains through command execution?***
+
+    Sticking to the same query from the previous question, we see that the attacker after confirming the *id,whoami* commands he executes a command but looks to be URL encoded, by following 	the stream we can copy the command and drop it on [CyberChef](https://gchq.github.io/CyberChef/#recipe=URL_Decode(true)&input=SGVsbG8lMkMlMjB3b3JsZCUyMQ) an open source tool known as the 	swiss army knife for encryption, encoding,compression etc.
+
+<img width="1915" height="234" alt="image" src="https://github.com/user-attachments/assets/458ef8fd-b8da-433f-88da-07cada500db2" />
+
+<img width="1283" height="333" alt="image" src="https://github.com/user-attachments/assets/94e8ce44-931a-4802-a5ff-3cc0b2763897" />
+
+Once we copy the commmand and upload it to CyberChef we will use the Recipe *URL Decode* to decode the encoded command
+
+<img width="1541" height="737" alt="image" src="https://github.com/user-attachments/assets/31d2b1b6-d7ce-47ec-8df4-91e94ab7bbff" />
+
+The output shows us that the command is telling the server to open a live remote command session back to the attacker this is called *Reverse Shell*
+
+<img width="828" height="220" alt="image" src="https://github.com/user-attachments/assets/1f763144-345d-45d2-9673-df058165f2b3" />
+
+*ANS: `Reverse Shell`*
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
