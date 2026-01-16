@@ -118,6 +118,7 @@ On the same decoded output from the above question we can see that the connectio
 *ANS: `4422`*
 
 **CONCLUSION**
+
 ***This investigation confirmed that the attacker successfully compromised the web application by abusing a file upload functionality. A PHP web shell (dbfunctions.php) was uploaded through a legitimate profile edit feature and stored in a web-accessible directory where server-side code execution was permitted.
 
 Network traffic analysis revealed that the attacker verified command execution using basic system reconnaissance commands before escalating to an interactive remote shell. This was achieved by issuing commands through the web shell that caused the server to initiate an outbound connection, granting the attacker real-time control of the system.
