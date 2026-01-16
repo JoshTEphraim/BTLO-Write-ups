@@ -33,13 +33,13 @@ we immediately notice a high volume of port scanning done by IP `10.251.96.4` to
 
 *ANS: `1-1024`*
 
-3. ***What is the type of port scan conducted?
+3. ***What is the type of port scan conducted?***
 
    When we look at the two IPs we see alot of `SYN` scan being sent to the host IP `10.251.96.5` using the protocol `TCP` and hence this is a `TCP SYN`scan
 
    <img width="681" height="224" alt="image" src="https://github.com/user-attachments/assets/c79ee231-ed6d-4aee-83d6-2d60a253721c" />
 
-*ANS: `TCP SYN
+*ANS: `TCP SYN*
 
 4. ***Two more tools were used to perform reconnaissance against open ports, what were they?***
 
@@ -51,11 +51,17 @@ Going further down while paying attention on the `user-agent` field we come acro
 
 <img width="1575" height="776" alt="image" src="https://github.com/user-attachments/assets/a1ce1d54-2ebf-47e0-81c4-f72bf4977a26" />
 
+*ANS: `Gobuster 3.0.1, sqlmap 1.4.7`*
 
+5. ***What is the name of the php file through which the attacker uploaded a web shell?***
 
+   We need to a understand what a webshell is, this is a malicious script uploaded to a compromised web server that helps the attacker gain remote control and execute commands. Since this is being uploaded we are going to look at the **POST** requests using the query `http.request.method==POST`. We come across an `upload.php` on packet No. 16102, following the stream we are going to focus on the header of the client which is in red. 
 
+<img width="1588" height="785" alt="image" src="https://github.com/user-attachments/assets/6b7a64a7-5ff6-42d4-919d-e6cab4ba65a6" />
 
+From the image looking at the referer of `upload.php` which means where it was directed from and we can see the original upload was directed from `http://10.251.96.5/editprofile.php` . This confirms that the file which was uploaded was `editprofile.php`
 
+*ANS: `editprofile.php`*
 
 
 
