@@ -128,6 +128,9 @@ Answering the question systematically we can see that the Group which was involv
 
 10. *** Investigating the other threat group. What is the APT number assigned to this group? What is the name of the specific operation that involved dropping web shells on SharePoint servers? In what year was this group first observed, and what is their possible motivation?***
 
+For this we will be using the other *.pdf* document
+
+<img width="920" height="355" alt="image" src="https://github.com/user-attachments/assets/710b6362-f11d-464b-8988-f9dca922f8fe" />
 
 
 
