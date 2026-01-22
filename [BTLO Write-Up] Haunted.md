@@ -100,6 +100,13 @@ From Incident Scope, it was mentioned that ACIS code has several vulnerabilities
 
 7. *** What file was inserted during the attack, and which country did the attack originate from?***
 
+<img width="649" height="562" alt="image" src="https://github.com/user-attachments/assets/e1fddec1-887d-4d54-9c5e-1914466a9d65" />
+
+We can see that a suspicious IP was found originating from *China* and due to the *SQL Injection* vulnerability the team discovered an unexpected file placed on the ACIS application
+
+*ANS: `JSP, China`*
+
+8. *** It is said that if a specific network security technique had been properly implemented, the attacker likely would have failed to accomplish their mission. What is this technique called?***
 
 
 
