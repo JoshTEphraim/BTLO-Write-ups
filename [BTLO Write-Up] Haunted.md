@@ -110,11 +110,23 @@ We can see that a suspicious IP was found originating from *China* and due to th
 
 <img width="654" height="331" alt="image" src="https://github.com/user-attachments/assets/5c51d862-2a0c-4842-b437-80b78cac6c6d" />
 
+We can see from the *Threat Vectors* Section that *Network Segmentation* was not done which lead to the attacker moving from one point to another which is a techniques called *Lateral Movement*. Network Segmentation acts as a barrier that divides a network into isolated zones preventing attackers from moving freely after an initial breach.
 
+*ANS: `Network Segmentation`*
 
+9. ***Adversary Analysis, this one group in particular as being involved in numerous attacks, including an attack on a medical research company during COVID-19. What is the name of this threat group (according to MITRE), what threat vector do they use, what is their country of origin, and what is their motivation?***
 
+Going to the extracted files one stand out once openned and that is *FIN&-TS-ST0216-AdversaryAnalysis.pdf*
 
+<img width="925" height="393" alt="image" src="https://github.com/user-attachments/assets/eabe0c47-b558-4fa3-8787-29420bfe82e5" />
 
+Answering the question systematically we can see that the Group which was involved on attacks on Medical facilities during the Covid-19 pandemic was *FIN7* a *Russion* speaking threat group which leveraged the Ransomware techniques by encrypting data belonging to the victims and threatening to expose the data meaning this was *financially* motivated 
+
+<img width="656" height="528" alt="image" src="https://github.com/user-attachments/assets/b8e5deca-e3eb-493c-afff-2e7023085c4f" />
+
+*ANS: `FIN7, Ransomware, Russia, Financial`*
+
+10. *** Investigating the other threat group. What is the APT number assigned to this group? What is the name of the specific operation that involved dropping web shells on SharePoint servers? In what year was this group first observed, and what is their possible motivation?***
 
 
 
