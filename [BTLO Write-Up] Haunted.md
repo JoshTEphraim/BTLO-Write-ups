@@ -132,7 +132,15 @@ For this we will be using the other *.pdf* document
 
 <img width="920" height="355" alt="image" src="https://github.com/user-attachments/assets/710b6362-f11d-464b-8988-f9dca922f8fe" />
 
+Looking at the report we can see that *APT27* used a *SharePoint Server Compromise* campaign to drop webshells on *SharePoint Servers*. This was first seen in the year *2010*.
 
+<img width="655" height="703" alt="image" src="https://github.com/user-attachments/assets/870b3e79-cd79-4387-abe9-8d5d3ae40c61" />
+
+The groups main motivation was *Espionage* which means stealing sensitive data covertly using digital means such as *Malware, Phishing and APTs* for political, economic, military or strategic advantage.
+
+*ANS: `APT27, SharePoint Server Compromise, 2010, espionage`*
+
+11. ***Haunted Company Inc. in Tokyo is under cyber attack. Based on the IOCs that were provided (hint: BAT!), what attack vectors did the threat actor use?***
 
 
 
