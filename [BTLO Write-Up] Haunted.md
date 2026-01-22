@@ -108,6 +108,7 @@ We can see that a suspicious IP was found originating from *China* and due to th
 
 8. *** It is said that if a specific network security technique had been properly implemented, the attacker likely would have failed to accomplish their mission. What is this technique called?***
 
+<img width="654" height="331" alt="image" src="https://github.com/user-attachments/assets/5c51d862-2a0c-4842-b437-80b78cac6c6d" />
 
 
 
