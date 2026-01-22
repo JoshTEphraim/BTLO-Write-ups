@@ -48,20 +48,57 @@ Going back to our question we are asked of a year an attacked happened, from the
 
 Opening it we find an attack happenned on a *GenX Financial Companyy* on 2017 which is a *Credit Reporting Agency* from the *US* 
 
-https://miro.medium.com/v2/resize:fit:640/format:webp/0*ovPe5Gv2x_WjyHNn.png
+<img width="651" height="263" alt="image" src="https://github.com/user-attachments/assets/9971d690-cf54-4d8c-8cd3-aa877bb3081e" />
 
+*ANS: `GenX Financial, US, Credit Reporting Agency`*
 
+2. ***According to the data breach summary, one of their critical assets was compromised, and they later discovered a vulnerability in one of their public-facing applications. What type of weakness was exploited to breach their network? ***
 
+From the report we can see the vulnerability was on an *APache Struts Web Server* which was unpatched *CVE-2017-5638*. Using the CVE to look it up in google to better understand it , we come across an article by [Black Duck](https://www.blackduck.com/blog/cve-2017-5638-apache-struts-vulnerability-explained.html) 
 
+<img width="1449" height="587" alt="image" src="https://github.com/user-attachments/assets/fe401222-5822-4acc-b47b-0a6f486f04ad" />
 
+The article explains that the Struts is an open source Web Application that had problems intergrating to other frameworks making patching the application difficult. By this we can conclude that this was an ***Application vulnerability***
 
+*ANS: `Application Vulnerability`*
 
+3. ***How long did this breach go undetected? What was the Mean Time to Detect (MTTD)?***
 
+From the *Incident Scope* we can see that the breah had lasted for *76 days* where the attackers infiltrated 48 databases
 
+<img width="636" height="262" alt="image" src="https://github.com/user-attachments/assets/b2143300-a7ef-4f58-8ce7-4908f6fc90fb" />
 
+*ANS: `76 days`*
 
+4. ***What application was targeted by the attacker? What vulnerability was exploited, and where is this application located within the network?***
 
+We already know that the Vulnerability was on *Apache Struts* and the *CVE* ;but going firther down on the report we see the location of the application
 
+<img width="601" height="415" alt="image" src="https://github.com/user-attachments/assets/e971567f-458c-4d51-858e-eb1dbbef7c27" />
+
+*ANS: ` Aoche Struts, CVE-2017-5638, ACIS`*
+
+5. ***The attackers exfiltrated millions of records. How many consumer details were estimated to be exposed? How, and through which channel, was the data exfiltrated from the premises? ***
+
+<img width="652" height="213" alt="image" src="https://github.com/user-attachments/assets/38970c8a-a1e9-46d6-9b60-1f7fe3e55d1d" />
+
+We an aproximation of 148 million records exploited by the attacker.
+
+<img width="653" height="202" alt="image" src="https://github.com/user-attachments/assets/9fa34abf-8fbf-42aa-9a14-383bc144b61f" />
+
+The channels used by the attacker to exfiltrate the data stolen came from *encrypted chennels*
+
+*ANS: `148 million, encypted`*
+
+6. ***Later, during the investigation, a flaw was discovered in their ACIS code rendering system. What were these flaws?***
+
+<img width="652" height="356" alt="image" src="https://github.com/user-attachments/assets/b23f5025-fd7c-4652-9aef-94bfdb2db117" />
+
+From Incident Scope, it was mentioned that ACIS code has several vulnerabilities and that include IDOR and SQL Injection
+
+*ANS: `SQL injection, Insecure Direct Object Reference`*
+
+7. *** What file was inserted during the attack, and which country did the attack originate from?***
 
 
 
