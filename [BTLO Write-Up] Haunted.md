@@ -1,11 +1,12 @@
-# HAUNTED
+#HAUNTED
+
 ***
 
 *Tools - exiftool, officemalscanner, CyberChef*
 
 *Category - Threat Intelligence*
 
-*Difficulty - Easy
+*Difficulty - Easy*
 
 ***
 
