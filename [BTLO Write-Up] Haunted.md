@@ -38,16 +38,17 @@ Opening the link we find a website were we are asked to decode a *base64* line b
 
 Once decoded we can copy the output and paste it on the box on the website we had been given a link to
 
+After submitting we will see 3 icons of which by clicking them we will begin to download the intel from the three countries *London, New York and Tokyo*. Once we done downloading and extracting we find that one of the files *Tokyo.IOC.Zip* is password protected, so we will keep this for later
 
-After submitting we will see 3 icons 
+<img width="892" height="262" alt="image" src="https://github.com/user-attachments/assets/6f9c11a7-2b6f-485f-97d4-748a70f95563" />
 
+Going back to our question we are asked of a year an attacked happened, from the files extracted we can see a *.pdf* report
 
+<img width="1303" height="495" alt="image" src="https://github.com/user-attachments/assets/a4856f51-a0f9-49c1-962d-dadae4ef9646" />
 
+Opening it we find an attack happenned on a *GenX Financial Companyy* on 2017 which is a *Credit Reporting Agency* from the *US* 
 
-
-
-
-
+https://miro.medium.com/v2/resize:fit:640/format:webp/0*ovPe5Gv2x_WjyHNn.png
 
 
 
