@@ -5,7 +5,6 @@
 *Difficulty - Easy*
 
 ## SCENARIO
-***
 
 ***You got a mail.***
 
