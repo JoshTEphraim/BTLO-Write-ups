@@ -1,11 +1,10 @@
 # EXPOSED
-***
 
 *Tools - GitTools, Nuclei, T1213.003*
 
 *Difficulty - Easy*
 
-**SCENARIO**
+## SCENARIO
 ***
 
 ***You got a mail.***
