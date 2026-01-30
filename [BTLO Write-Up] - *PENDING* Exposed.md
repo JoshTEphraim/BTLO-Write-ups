@@ -60,17 +60,41 @@ Repeating the same in all 3 folders we can come to a comclusion that the springb
 
 3. ***Website B is using Wordpress. Which nuclei template is useful in detecting exposed git directory?***
 
-On the desktop is a folder called *nuclei* buut what is it? 
+On the desktop is a folder called *nuclei* but what is it? Nuclei is a modern high-perfomance vunerability scanner that uses simple YAML-based templates. For this we need to go on the *nuclei* folder and look for a folder containing *wordpress* which will be under a folder called *vulnerabilities* going down I found one that is related with `git` as we are exposing its vulnerability. Even though i looked for the template in the official documentation [projectdiscovery](https://github.com/projectdiscovery/nuclei-templates/tree/main/workflows)the official owner of *nuclei* I only found of a template `wordpress-workflow.yaml` which the description states *A simple workflow that runs all wordpress related nuclei templates on a given target.*
 
+<img width="644" height="516" alt="image" src="https://github.com/user-attachments/assets/1d6a4097-00c8-4007-b590-15e43bbc1335" />
 
+*ANS: `wordpress-git-config.yaml`*
 
+ 4. ***Where is the git directory located in website B?***
 
+So now we have the template which we need to use from the previous question, we now need to use `nuclei` with the template. Going over the `nuclei` website we find an option of how to use it with the template and the target website we have
 
+<img width="898" height="181" alt="image" src="https://github.com/user-attachments/assets/026f7d4b-043d-407c-83bd-230996d20c45" />
 
+So our code will be `./nuclei -u http://wp.sbt -t /home/ubuntu/Desktop/nuclei/nuclei-templates/vulnerabilities/wordpress/`. The `./` before `nuclei` show that the file is an executable file. After running `nuclei` will find the vulnerability and show us where the `.git` directory is located.
 
+<img width="1534" height="392" alt="image" src="https://github.com/user-attachments/assets/c92ec46e-a1cf-42a7-a9ab-4143e9ccf445" />
 
+*ANS: `/wp-content/themes/.git`*
 
+5. ***Commit messages can be interesting sometimes as an attacker. What’s here?***
 
+we have the path to the git file from the question above, now lets use *Dumper* to download the repository of the second website. Command we are going to use is `bash gitdumper.sh http://wp.sbt/wp-content/themes/.git/ new-dump` where *new-dump* is our new folder where the contents of the repository will go
+
+<img width="1109" height="614" alt="image" src="https://github.com/user-attachments/assets/6236fc51-bfbf-4ccd-87ec-6a0cc4403290" />
+
+Now we need to look for the *Commit messages* using some linux fu
+
+<img width="1118" height="671" alt="image" src="https://github.com/user-attachments/assets/ecdd6ab5-e842-4317-99ad-2c7b939ac4e4" />
+
+going further down we find an ASCII Text file
+
+<img width="1854" height="278" alt="image" src="https://github.com/user-attachments/assets/ffb64c1f-3e05-480e-85ad-0536d043a176" />
+
+Now from the master file we find commits but one stood out having containing a *zendesk access token* which this can be highly valuable by an attacker
+
+*ANS: `rX3dea78sdummY43sZ`*
 
 
 
