@@ -96,12 +96,19 @@ Now from the master file we find commits but one stood out having containing a *
 
 *ANS: `rX3dea78sdummY43sZ`*
 
+6. ***Some sensitive file seems to be mistakenly committed, what is it?***
 
+SO for this we know we are looking for commit changes, and by doing some OSINT i came to the website [git.github](https://git.github.io/git-reference/inspect/) where i came across a command `git log --stat` which shows changes introduced at each commit. Lets hope we can find the mistskes made.
 
+<img width="1194" height="491" alt="image" src="https://github.com/user-attachments/assets/5087bb33-254b-4d24-bd21-965e3270aa18" />
 
+Running the command shows us changes made at every commit, scrolling down we find some file which should not be exposed
 
+<img width="818" height="217" alt="image" src="https://github.com/user-attachments/assets/04b64682-5d7f-4cea-a35a-b19746ac0973" />
 
+`id_rsa` is a file that contains private *SSH* keys which us used to digitally sign your connection requests and prove you own the corresponding key and it grants unauthorized, passwordless access to servers.
 
+*ANS: `id_rsa`*
 
 
 
